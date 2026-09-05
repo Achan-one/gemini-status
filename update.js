@@ -1,15 +1,12 @@
 const fs = require('fs');
 
-// 날짜 문자열 추출 헬퍼 (배열 내부 탐색)
 function extractDateStr(updateItem) {
   if (!updateItem) return null;
-  // 문자열 형태("2026-06-19 00:54") 찾기
   for (const field of updateItem) {
     if (typeof field === 'string' && /^\d{4}-\d{2}-\d{2}/.test(field)) {
       return field.split(' ')[0];
     }
   }
-  // 타임스탬프 숫자 형태 대비
   for (const field of updateItem) {
     if (Array.isArray(field) && typeof field[0] === 'string' && /^\d{10}$/.test(field[0])) {
       const d = new Date(parseInt(field[0], 10) * 1000);
@@ -46,10 +43,6 @@ async function run() {
     const rawData = await res.json();
     const incidentList = rawData[0]?.[0]?.[0] || [];
 
-    const now = new Date();
-    const ninetyDaysAgo = new Date();
-    ninetyDaysAgo.setDate(now.getDate() - 90);
-
     const parsedIncidents = [];
 
     for (const item of incidentList) {
@@ -63,26 +56,24 @@ async function run() {
 
       if (!startDateStr) continue;
 
-      const startDate = new Date(startDateStr);
-      if (startDate >= ninetyDaysAgo) {
-        parsedIncidents.push({
-          id: id || '',
-          title: title || 'Service Degradation',
-          severity: typeof severity === 'number' ? severity : 1,
-          startDate: startDateStr,
-          endDate: endDateStr,
-          affectedComponents: Array.isArray(affectedIds) ? affectedIds : [1]
-        });
-      }
+      // 90일 필터를 제거하고 전체 인시던트를 수집하여 저장
+      parsedIncidents.push({
+        id: id || '',
+        title: title || 'Service Incident',
+        severity: typeof severity === 'number' ? severity : 1,
+        startDate: startDateStr,
+        endDate: endDateStr,
+        affectedComponents: Array.isArray(affectedIds) ? affectedIds : [1]
+      });
     }
 
     const result = {
-      lastSync: now.toISOString(),
+      lastSync: new Date().toISOString(),
       incidents: parsedIncidents
     };
 
     fs.writeFileSync('status.json', JSON.stringify(result, null, 2));
-    console.log(`Success! Parsed ${parsedIncidents.length} incidents.`);
+    console.log(`Success! Total ${parsedIncidents.length} incidents saved.`);
   } catch (err) {
     console.error('Update script failed:', err);
     process.exit(1);
