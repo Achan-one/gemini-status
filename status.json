@@ -1,4 +1,618 @@
 {
-  "lastSync": "2026-09-05T11:30:09.539Z",
-  "incidents": []
+  "lastSync": "2026-09-05T11:32:14.089Z",
+  "incidents": [
+    {
+      "id": "AIStudio-build-environments-20260714",
+      "title": "Issues with apps in AI Studio Build.",
+      "severity": 1,
+      "startDate": "2026-07-14",
+      "endDate": "2026-07-15",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "GeminiAPI-context-caching-issue-20260619",
+      "title": "Issues with Nano Banana",
+      "severity": 1,
+      "startDate": "2026-06-19",
+      "endDate": "2026-06-19",
+      "affectedComponents": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "GeminiAPI-context-caching-issue-20260607",
+      "title": "Issues with Gemini API context caching",
+      "severity": 1,
+      "startDate": "2026-06-07",
+      "endDate": "2026-06-07",
+      "affectedComponents": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "GeminiAPI-batch-outage-20260603",
+      "title": "Issues with Gemini API batch",
+      "severity": 1,
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-04",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "AIStudio-partial-outage-20260530",
+      "title": "Partial outage impacting some AI Studio features",
+      "severity": 1,
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-31",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "Spanner-outage-20260521",
+      "title": "Infrastructure outage",
+      "severity": 2,
+      "startDate": "2026-05-21",
+      "endDate": "2026-05-21",
+      "affectedComponents": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "GeminiAPI-deep-research-breakages-20260503",
+      "title": "Issues with streaming Deep Research",
+      "severity": 1,
+      "startDate": "2026-05-03",
+      "endDate": "2026-05-05",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "AIStudio-create-dataset-failures-20260503",
+      "title": "CreateDataset failures in AI Studio",
+      "severity": 1,
+      "startDate": "2026-05-03",
+      "endDate": "2026-05-05",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-applets-outage-20260429",
+      "title": "AI Studio Build outage",
+      "severity": 2,
+      "startDate": "2026-04-29",
+      "endDate": "2026-04-29",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-postpay-upgrade-20260422",
+      "title": "Customer upgrade to postpay experiencing service disruption",
+      "severity": 1,
+      "startDate": "2026-04-21",
+      "endDate": "2026-04-23",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "GeminiAPI-new-keys-20260417",
+      "title": "Gemini API is having some issues serving recently created keys",
+      "severity": 1,
+      "startDate": "2026-04-17",
+      "endDate": "2026-04-27",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "AIStudio-model-errors-20260417",
+      "title": "AI Studio experiencing increased error rates.",
+      "severity": 1,
+      "startDate": "2026-04-17",
+      "endDate": "2026-04-20",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-latency-issue-20260402",
+      "title": "AI Studio Build experiencing latency issues.",
+      "severity": 1,
+      "startDate": "2026-04-02",
+      "endDate": "2026-04-16",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-batch-issue-20260403",
+      "title": "Gemini API Batch experiencing issues.",
+      "severity": 1,
+      "startDate": "2026-04-03",
+      "endDate": "2026-04-06",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "AIStudio-spend-cap-issue-20260321",
+      "title": "AI Studio Spend Cap experiencing intermittent issues.",
+      "severity": 1,
+      "startDate": "2026-03-21",
+      "endDate": "2026-03-21",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-api-issues-20260317",
+      "title": "Increased error rates and latency for Gemini API.",
+      "severity": 1,
+      "startDate": "2026-03-17",
+      "endDate": "2026-03-17",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "AIStudio-model-quota-issues-20260303",
+      "title": "Increased error rates for model quota.",
+      "severity": 2,
+      "startDate": "2026-03-03",
+      "endDate": "2026-03-04",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-applets-issues-20260302",
+      "title": "Increased error rates for Build requests.",
+      "severity": 1,
+      "startDate": "2026-03-02",
+      "endDate": "2026-03-02",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "GeminiApi-Batch-outage-20260225",
+      "title": "Gemini API Batch experiencing an outage.",
+      "severity": 2,
+      "startDate": "2026-02-27",
+      "endDate": "2026-02-27",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "AIStudio-build-fixes-20260224",
+      "title": "AI Studio Build experiencing intermittent issues.",
+      "severity": 1,
+      "startDate": "2026-02-24",
+      "endDate": "2026-02-26",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-applets-loading-20260223",
+      "title": "AI Studio Build experiencing intermittent issues.",
+      "severity": 1,
+      "startDate": "2026-02-23",
+      "endDate": "2026-02-23",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-applets-outage-index-20260220",
+      "title": "AI Studio Build outage. 10% of agent requests are hanging.",
+      "severity": 2,
+      "startDate": "2026-02-20",
+      "endDate": "2026-02-21",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-applets-outage-index-20260219",
+      "title": "AI Studio Build outage. Apps may not load. Mitigations are underway.",
+      "severity": 2,
+      "startDate": "2026-02-19",
+      "endDate": "2026-02-20",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-applets-outage-20260219",
+      "title": "AI Studio Build outage. Apps may not load. Mitigations are underway.",
+      "severity": 2,
+      "startDate": "2026-02-19",
+      "endDate": "2026-02-19",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-applets-outage-20260218",
+      "title": "AI Studio Build outage. Apps may not load. Mitigations are underway.",
+      "severity": 2,
+      "startDate": "2026-02-18",
+      "endDate": "2026-02-18",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "Gemini-API-DR-20260204",
+      "title": "Increased error rates for DeepResearch requests on Interactions API",
+      "severity": 1,
+      "startDate": "2026-02-04",
+      "endDate": "2026-02-04",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "GeminiApi-Batch-outage-20260108",
+      "title": "Batch API outage.",
+      "severity": 2,
+      "startDate": "2026-01-08",
+      "endDate": "2026-01-09",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "AIStudio-applets-outage-20260107",
+      "title": "Apps in Build may not load due to esm.sh outage. Investigation is underway.",
+      "severity": 1,
+      "startDate": "2026-01-07",
+      "endDate": "2026-01-07",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "GeminiApi-NBP-outage-20251203",
+      "title": "Nano Banana Pro outage.",
+      "severity": 1,
+      "startDate": "2025-12-03",
+      "endDate": "2025-12-03",
+      "affectedComponents": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "AIStudio-applets-outage-20251118",
+      "title": "Apps in Build may not load due to global Cloudflare outage. Mitigations are underway.",
+      "severity": 1,
+      "startDate": "2025-11-18",
+      "endDate": "2025-11-18",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-logs-and-datasets-outage-20251111",
+      "title": "Gemini API Logs may not appear for some users. Investigation is underway.",
+      "severity": 1,
+      "startDate": "2025-11-11",
+      "endDate": "2025-11-11",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "YT-video-outage-20251022",
+      "title": "YouTube url handling outage.",
+      "severity": 1,
+      "startDate": "2025-10-22",
+      "endDate": "2025-10-22",
+      "affectedComponents": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "Process-PDF-outage-20251020",
+      "title": "File API document processing outage.",
+      "severity": 1,
+      "startDate": "2025-10-21",
+      "endDate": "2025-10-22",
+      "affectedComponents": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "AIStudio-code-assistant-outage-20251016",
+      "title": "AI Studio Code Assistant outage.",
+      "severity": 2,
+      "startDate": "2025-10-16",
+      "endDate": "2025-10-16",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-live-outage-20251009",
+      "title": "AI Studio Realtime and Gemini Live API outage.",
+      "severity": 2,
+      "startDate": "2025-10-09",
+      "endDate": "2025-10-09",
+      "affectedComponents": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-batch-outage-20251004",
+      "title": "Gemini Batch API outages.",
+      "severity": 2,
+      "startDate": "2025-10-04",
+      "endDate": "2025-10-08",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "AIStudio-file-service-outage-20250929",
+      "title": "Gemini API and AI Studio File Service / Veo outages.",
+      "severity": 2,
+      "startDate": "2025-09-29",
+      "endDate": "2025-09-29",
+      "affectedComponents": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": "AIStudio-unavailability-20250929",
+      "title": "Gemini API and AI Studio outage.",
+      "severity": 2,
+      "startDate": "2025-09-29",
+      "endDate": "2025-09-29",
+      "affectedComponents": [
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "id": "AIStudio-initial-load-issue-20250904",
+      "title": "AI Studio may not load for some users.",
+      "severity": 1,
+      "startDate": "2025-09-04",
+      "endDate": "2025-09-04",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-listmodels-outage-20250904",
+      "title": "ListModels requests fail for all users. Investigation is underway.",
+      "severity": 2,
+      "startDate": "2025-09-04",
+      "endDate": "2025-09-04",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-apikeys-quota-issue-20250903",
+      "title": "API key requests may fail for some users. Investigation is underway.",
+      "severity": 1,
+      "startDate": "2025-09-02",
+      "endDate": "2025-09-05",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-erroneous charges-20250824",
+      "title": "A bug in the billing system is causing erroneous charges on 'Gemini 2.5 Flash Native Image Generation' for some users. All such charges will be refunded.",
+      "severity": 1,
+      "startDate": "2025-08-23",
+      "endDate": "2025-09-03",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "AIStudio-video-understanding-unavailability-20250702",
+      "title": "Video Understanding is unavailable for some users. Investigation is underway.",
+      "severity": 1,
+      "startDate": "2025-07-01",
+      "endDate": "2025-07-02",
+      "affectedComponents": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "AIStudio-intermittent-unavailability-20250612",
+      "title": "Gemini API and AI Studio outage",
+      "severity": 2,
+      "startDate": "2025-06-12",
+      "endDate": "2025-06-12",
+      "affectedComponents": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "GeminiAPI-intermittent-unavailability-20250605",
+      "title": "Intermittent unavailability of Gemini API 2.5 Pro",
+      "severity": 1,
+      "startDate": "2025-06-05",
+      "endDate": "2025-06-05",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "GeminiAPI-intermittent-unavailability-20250512",
+      "title": "Intermittent unavailability of Gemini API 2.5 Pro",
+      "severity": 1,
+      "startDate": "2025-05-11",
+      "endDate": "2025-05-12",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "GeminiAPI-intermittent-unavailability-20250509",
+      "title": "Intermittent unavailability of Gemini API",
+      "severity": 1,
+      "startDate": "2025-05-09",
+      "endDate": "2025-05-09",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "AIStudio-video-extraction-failures-20250506",
+      "title": "Video processing failures in AI Studio",
+      "severity": 1,
+      "startDate": "2025-05-01",
+      "endDate": "2025-05-08",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "Gemini-2.5-extra-text-returned-20250506",
+      "title": "Extra text returned with Gemini 2.5 models",
+      "severity": 1,
+      "startDate": "2025-05-06",
+      "endDate": "2025-05-06",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "Gemini-2.5-Pro-Unavailability-20250415",
+      "title": "Gemini 2.5 Pro Unavailability Incident",
+      "severity": 1,
+      "startDate": "2025-04-15",
+      "endDate": "2025-04-15",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "Gemini-2.5-Pro-Unavailability-20250414",
+      "title": "Gemini 2.5 Pro Unavailability Incident",
+      "severity": 1,
+      "startDate": "2025-04-14",
+      "endDate": "2025-04-14",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "Gemini-1.5-Pro-Throttling-20250219",
+      "title": "Gemini 1.5 Pro Throttling Incident",
+      "severity": 1,
+      "startDate": "2025-02-19",
+      "endDate": "2025-02-21",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "Gemini-1.5-Pro-Flash-Throttling-20250205",
+      "title": "Gemini 1.5 Pro and Flash Throttling Incident",
+      "severity": 1,
+      "startDate": "2025-02-05",
+      "endDate": "2025-02-10",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "Gemini-1.5-Pro-Throttling-20250126",
+      "title": "Gemini 1.5 Pro Throttling Incident",
+      "severity": 1,
+      "startDate": "2025-01-26",
+      "endDate": "2025-01-29",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "Gemini-2.0-Flash-1.5-Pro-Throttling-20250128",
+      "title": "Gemini 2.0 Flash and 1.5 Pro Throttling Incident",
+      "severity": 1,
+      "startDate": "2025-01-28",
+      "endDate": "2025-02-01",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "Gemini-2.0-Flash-Throttling-20250114",
+      "title": "Gemini 2.0 Flash Throttling Incident",
+      "severity": 1,
+      "startDate": "2025-01-14",
+      "endDate": "2025-01-15",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "Gemini-2.0-Flash-Throttling-20250107",
+      "title": "Gemini 2.0 Flash Throttling Incident",
+      "severity": 1,
+      "startDate": "2025-01-07",
+      "endDate": "2025-01-09",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "Gemini-2.0-Flash-Throttling-20241230",
+      "title": "Gemini 2.0 Flash Throttling Incident",
+      "severity": 1,
+      "startDate": "2024-12-30",
+      "endDate": "2024-12-31",
+      "affectedComponents": [
+        1
+      ]
+    },
+    {
+      "id": "AI-Studio-Drive-Link-Issue-20250117",
+      "title": "AI Studio Drive Link Issue",
+      "severity": 1,
+      "startDate": "2025-01-17",
+      "endDate": "2025-01-23",
+      "affectedComponents": [
+        3
+      ]
+    },
+    {
+      "id": "Gemini-API-Issue-20250219",
+      "title": "Gemini API throttling some users using the OpenAI library",
+      "severity": 1,
+      "startDate": "2025-02-19",
+      "endDate": "2025-02-21",
+      "affectedComponents": [
+        1
+      ]
+    }
+  ]
 }
