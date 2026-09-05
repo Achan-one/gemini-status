@@ -1,19 +1,30 @@
 const fs = require('fs');
 
-function extractDateStr(updateItem) {
-  if (!updateItem) return null;
-  for (const field of updateItem) {
-    if (typeof field === 'string' && /^\d{4}-\d{2}-\d{2}/.test(field)) {
-      return field.split(' ')[0];
-    }
-  }
-  for (const field of updateItem) {
-    if (Array.isArray(field) && typeof field[0] === 'string' && /^\d{10}$/.test(field[0])) {
-      const d = new Date(parseInt(field[0], 10) * 1000);
-      return d.toISOString().split('T')[0];
+// 날짜 문자열 안전 추출 함수
+function extractDate(updateItem) {
+  if (!Array.isArray(updateItem)) return null;
+  for (const val of updateItem) {
+    if (typeof val === 'string' && /^\d{4}-\d{2}-\d{2}/.test(val)) {
+      return val.split(' ')[0]; // "YYYY-MM-DD"
     }
   }
   return null;
+}
+
+// 다중 중첩 배열에서 실제 인시던트 배열(문자열 ID로 시작하는 항목들의 부모)을 찾는 함수
+function findIncidentList(arr) {
+  if (!Array.isArray(arr)) return [];
+  // 현재 배열의 첫 원소가 ["AIStudio-...", "Issues...", ...] 형태인지 확인
+  if (Array.isArray(arr[0]) && typeof arr[0][0] === 'string' && arr[0][0].includes('-')) {
+    return arr;
+  }
+  for (const item of arr) {
+    if (Array.isArray(item)) {
+      const res = findIncidentList(item);
+      if (res.length > 0) return res;
+    }
+  }
+  return [];
 }
 
 async function run() {
@@ -41,7 +52,9 @@ async function run() {
     }
 
     const rawData = await res.json();
-    const incidentList = rawData[0]?.[0]?.[0] || [];
+    const incidentList = findIncidentList(rawData);
+
+    console.log(`Found raw incidents count: ${incidentList.length}`);
 
     const parsedIncidents = [];
 
@@ -51,12 +64,11 @@ async function run() {
 
       if (!Array.isArray(updates) || updates.length === 0) continue;
 
-      const startDateStr = extractDateStr(updates[0]);
-      const endDateStr = extractDateStr(updates[updates.length - 1]) || startDateStr;
+      const startDateStr = extractDate(updates[0]);
+      const endDateStr = extractDate(updates[updates.length - 1]) || startDateStr;
 
       if (!startDateStr) continue;
 
-      // 90일 필터를 제거하고 전체 인시던트를 수집하여 저장
       parsedIncidents.push({
         id: id || '',
         title: title || 'Service Incident',
@@ -73,7 +85,7 @@ async function run() {
     };
 
     fs.writeFileSync('status.json', JSON.stringify(result, null, 2));
-    console.log(`Success! Total ${parsedIncidents.length} incidents saved.`);
+    console.log(`Success! Saved ${parsedIncidents.length} incidents to status.json.`);
   } catch (err) {
     console.error('Update script failed:', err);
     process.exit(1);
