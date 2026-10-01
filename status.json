@@ -1,6 +1,17 @@
 {
-  "lastSync": "2026-10-01T15:57:20.668Z",
+  "lastSync": "2026-10-01T20:51:02.078Z",
   "incidents": [
+    {
+      "id": "GeminiAPI-voice-replication-20261001",
+      "title": "Issues creating replicated voices in Gemini API and AI Studio",
+      "severity": 1,
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-01",
+      "affectedComponents": [
+        1,
+        3
+      ]
+    },
     {
       "id": "AIStudio-billing-issues-20260916",
       "title": "Issues with AI Studio Billing and payment settings",
