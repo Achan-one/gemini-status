@@ -1,6 +1,16 @@
 {
-  "lastSync": "2026-10-30T09:30:46.443Z",
+  "lastSync": "2026-10-30T16:29:38.089Z",
   "incidents": [
+    {
+      "id": "AIStudio-api-keys-outage-20261030",
+      "title": "Major outage affecting API key traffic in AI Studio",
+      "severity": 2,
+      "startDate": "2026-10-30",
+      "endDate": "2026-10-30",
+      "affectedComponents": [
+        3
+      ]
+    },
     {
       "id": "AIStudio-build-apps-20261022",
       "title": "Issues with apps in AI Studio Build",
